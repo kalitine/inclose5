@@ -1,6 +1,6 @@
 # In-Close5
 
-In-Close5 is a fast formal concept miner
+In-Close5 is a fast formal concept miner.
 
 Author's implementation: https://sourceforge.net/projects/inclose/
 
@@ -21,12 +21,24 @@ To run the program, type './InClose5' and the arguments:
 
 1) Dataset's filename;
 
-2) minimum number of rows;
+2) minimum number of rows (i.e., minimum number of objects in a formal concept);
 
-3) minimum number of columns;
+3) minimum number of columns (i.e., minimum number of attributes in a formal concept);
 
 4) Output filename for the list of biclusters;
 
 For instance:
 ./InClose5 exampleDataset 2 1 exampleOutput.m
 
+### Hot to read the output
+For the example above the output is:
+```
+A{1} = [3 4 ];
+B{1} = [2 3 ];
+A{2} = [1 2 ];
+B{2} = [4 5 6 ];
+```
+A is a set of objects (extent).
+B is a set of attributes (intent).
+(A{1}, B{1})=([3 4], [2 3]) is a formal concept number 1.
+(A{2}, B{2})=([1 2], [4 5 6]) is a formal concept number 2.
