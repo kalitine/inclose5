@@ -35,3 +35,13 @@ struct bic_t {
 };
 
 typedef bic_t *pbic_t;
+
+struct cluster_t {
+	row_t *A;
+	row_t sizeA;
+	col_t *B;
+	col_t sizeB;
+};
+
+
+typedef cluster_t *clusters_t;
